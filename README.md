@@ -59,14 +59,46 @@ end;local ChackQ = function()
             ["CFrameQ"] = CFrame.new(894.488647, 5.14000702, 4392.43359, 0.819155693, -0, -0.573571265, 0, 1, -0, 0.573571265, 0, 0.819155693),
             ["CFrameMon"] = CFrame.new(886.707886, 5.58019638, 4462.00635, -0.988810837, 0, 0.149175406, 0, 1, 0, -0.149175406, 0, -0.988810837)
         }
-        elseif Lv.Value >= 60 and Lv.Value <= 74 then
+        elseif Lv.Value >= 75 and Lv.Value <= 89 then
         return {
             ["Mon"] = 'Desert Officer',
             ["NumQ"] = 'DesertQuest',
             ["NameQ"] = 2,
             ["CFrameQ"] = CFrame.new(894.488647, 5.14000702, 4392.43359, 0.819155693, -0, -0.573571265, 0, 1, -0, 0.573571265, 0, 0.819155693),
             ["CFrameMon"] = CFrame.new(1578.36646, 0.308917493, 4299.2334, -0.707134247, 0, 0.707079291, 0, 1, 0, -0.707079291, 0, -0.707134247)
-        }        
+        }  
+        elseif Lv.Value >= 90 and Lv.Value <= 99 then
+        return {
+            ["Mon"] = 'Snow Bandit',
+            ["NumQ"] = 'SnowQuest',
+            ["NameQ"] = 1,
+            ["CFrameQ"] = CFrame.new(1389.74451, 86.6520844, -1298.90796, -0.342042685, 0, 0.939684391, 0, 1, 0, -0.939684391, 0, -0.342042685),
+            ["CFrameMon"] = CFrame.new(1199.32776, 85.9707413, -1329.03772, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+        }  
+        elseif Lv.Value >= 100 and Lv.Value <= 119 then
+        return {
+            ["Mon"] = 'Snowman',
+            ["NumQ"] = 'SnowQuest',
+            ["NameQ"] = 2,
+            ["CFrameQ"] = CFrame.new(1389.74451, 86.6520844, -1298.90796, -0.342042685, 0, 0.939684391, 0, 1, 0, -0.939684391, 0, -0.342042685),
+            ["CFrameMon"] = CFrame.new(1190.08948, 104.470284, -1626.58081, -9.846092e-11, -8.59347438e-08, -1, 2.65792961e-11, 1, -8.59347438e-08, 1, -2.65793047e-11, -9.846092e-11)
+        } 
+        elseif Lv.Value >= 120 and Lv.Value <= 149 then
+        return {
+            ["Mon"] = 'Chief Petty Officer',
+            ["NumQ"] = 'MarineBaseQuest',
+            ["NameQ"] = 1,
+            ["CFrameQ"] = CFrame.new(-5039.58643, 27.3500385, 4324.68018, 0, 0, -1, 0, 1, 0, 1, 0, 0),
+            ["CFrameMon"] = CFrame.new(-4922.91309, 19.3499985, 4075.67896, -0.9968701, 9.67972582e-08, 0.07905671, 9.91126541e-08, 1, 2.53638373e-08, -0.07905671, 3.31199708e-08, -0.9968701)
+        }
+        elseif Lv.Value >= 150 and Lv.Value <= 174 then
+        return {
+            ["Mon"] = 'Sky Bandit',
+            ["NumQ"] = 'SkyQuest',
+            ["NameQ"] = 1,
+            ["CFrameQ"] = CFrame.new(-4839.96338, 715.597839, -2619.19165, 0.866007268, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, 0.866007268),
+            ["CFrameMon"] = CFrame.new(-4944.96875, 276.76413, -2784.90552, 0.992550731, 0, -0.121831827, 0, 1, 0, 0.121831827, 0, 0.992550731)
+        }   
     end
 end;
 (getgenv()).Config = {
@@ -88,7 +120,7 @@ end;
                                         v.activeController.attacking = false
                                         v.activeController.increment = 4
                                         v.activeController.blocking = false   
-                                        v.activeController.hitboxMagnitude = 150
+                                        v.activeController.hitboxMagnitude = 120
                                         v.activeController.humanoid.AutoRotate = true
                                           v.activeController.focusStart = 0
                                           v.activeController.currentAttackTrack = 0
@@ -119,7 +151,7 @@ local TW = function(...)
     pcall(function()
         if not _G.StopTween then
             local Distance = (CFrame[1].Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-            Tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/120, Enum.EasingStyle.Cubic),{CFrame = CFrame[1]})
+            Tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(Distance/200, Enum.EasingStyle.Cubic),{CFrame = CFrame[1]})
             if _G.StopTween then Tween:Cancel()
             elseif game.Players.LocalPlayer.Character.Humanoid.Health > 0 then Tween:Play() end
             if not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("OMG Hub") then
