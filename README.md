@@ -38,7 +38,7 @@ end;local ChackQ = function()
         elseif Lv.Value >= 30 and Lv.Value <= 39 then
         return {
             ["Mon"] = 'Pirate',
-            ["NumQ"] = 'PirateQuest',
+            ["NumQ"] = 'BuggyQuest1',
             ["NameQ"] = 1,
             ["CFrameQ"] = CFrame.new(-1141.07483, 4.10001802, 3831.5498, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627),
             ["CFrameMon"] = CFrame.new(-1136.18848, 3.45001364, 3888.21265, 0.956416667, 3.34192727e-08, -0.29200545, 2.64960787e-09, 1, 1.23125787e-07, 0.29200545, -1.18533258e-07, 0.956416667)
@@ -46,11 +46,11 @@ end;local ChackQ = function()
         elseif Lv.Value >= 40 and Lv.Value <= 59 then
         return {
             ["Mon"] = 'Brute',
-            ["NumQ"] = 'PirateQuest',
+            ["NumQ"] = 'BuggyQuest1',
             ["NameQ"] = 2,
             ["CFrameQ"] = CFrame.new(-1141.07483, 4.10001802, 3831.5498, 0.965929627, -0, -0.258804798, 0, 1, -0, 0.258804798, 0, 0.965929627),
             ["CFrameMon"] = CFrame.new(-1397.73499, 13.7513227, 4185.58398, 0.5592103, 0, -0.829025805, 0, 1, 0, 0.829025805, 0, 0.5592103)
-        }
+        }``
         elseif Lv.Value >= 60 and Lv.Value <= 74 then
         return {
             ["Mon"] = 'Desert Bandit',
