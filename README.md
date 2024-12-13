@@ -86,7 +86,7 @@ end;local ChackQ = function()
         elseif Lv.Value >= 120 and Lv.Value <= 149 then
         return {
             ["Mon"] = 'Chief Petty Officer',
-            ["NumQ"] = 'MarineBaseQuest',
+            ["NumQ"] = 'MarineQuest2',
             ["NameQ"] = 1,
             ["CFrameQ"] = CFrame.new(-5039.58643, 27.3500385, 4324.68018, 0, 0, -1, 0, 1, 0, 1, 0, 0),
             ["CFrameMon"] = CFrame.new(-4922.91309, 19.3499985, 4075.67896, -0.9968701, 9.67972582e-08, 0.07905671, 9.91126541e-08, 1, 2.53638373e-08, -0.07905671, 3.31199708e-08, -0.9968701)
